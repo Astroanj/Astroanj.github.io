@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Anjana Mohandasan | Astrophysicist</title>
-  
-  <!-- Modern Fonts: Outfit for titles, Plus Jakarta Sans for body -->
+
+  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@
       --bg-black: #030406;
       --card-bg: rgba(20, 24, 33, 0.6);
       --border-silver: rgba(226, 232, 240, 0.2);
-      
+
       /* Silver Palette */
       --silver-bright: #ffffff;
       --silver-main: #e2e8f0;
       --silver-subtle: #94a3b8;
       --silver-glow: rgba(226, 232, 240, 0.12);
-      --accent-star: #38bdf8; /* Soft cyan accent */
+      --accent-star: #38bdf8; 
 
       --font-heading: 'Outfit', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -53,7 +53,7 @@
     }
 
     .nav-container {
-      max-width: 900px; margin: 0 auto; padding: 0 1.5rem;
+      max-width: 950px; margin: 0 auto; padding: 0 1.5rem;
       display: flex; justify-content: space-between; align-items: center;
       height: 70px;
     }
@@ -66,14 +66,13 @@
     }
     .logo span { color: var(--silver-subtle); font-weight: 400; }
 
-    nav ul { display: flex; list-style: none; gap: 0.5rem; }
-    
-    /* Top Tab Button Styling */
+    nav ul { display: flex; list-style: none; gap: 0.4rem; }
+
     nav a {
       color: var(--silver-subtle); text-decoration: none;
-      font-size: 0.9rem; font-weight: 500;
-      padding: 0.5rem 1rem; border-radius: 6px;
-      transition: all 0.25 ease;
+      font-size: 0.88rem; font-weight: 500;
+      padding: 0.45rem 0.85rem; border-radius: 6px;
+      transition: all 0.25s ease;
       border: 1px solid transparent;
     }
 
@@ -90,41 +89,48 @@
     }
 
     main {
-      flex: 1; max-width: 900px; width: 100%;
-      margin: 0 auto; padding: 3.5rem 1.5rem;
+      flex: 1; max-width: 950px; width: 100%;
+      margin: 0 auto; padding: 3rem 1.5rem;
     }
 
     .page { display: none; animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
     .page.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* CIRCULAR PHOTO & HERO */
+    /* HERO PROFILE */
     .profile-hero {
       text-align: center;
-      padding-bottom: 3rem;
-      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
       border-bottom: 1px solid var(--border-silver);
     }
 
+    /* INCREASED SIZE TO 300px */
     .photo-wrapper {
       position: relative;
-      width: 160px; height: 160px;
+      width: 260px; height: 260px;
       margin: 0 auto 1.8rem;
     }
 
-    /* Circular Frame with Silver Glow */
+    /* ROTATED OPPOSITE WAY (35deg) */
     .profile-photo {
       width: 100%; height: 100%;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--silver-bright);
-      box-shadow: 0 0 25px rgba(226, 232, 240, 0.2);
+      box-shadow: 0 0 30px rgba(226, 232, 240, 0.25);
       background: #111;
+      transform: rotate(35deg);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-photo:hover {
+      transform: rotate(35deg) scale(1.02);
     }
 
     .profile-hero h1 {
       font-family: var(--font-heading);
-      font-size: 2.4rem; font-weight: 700;
+      font-size: 2.3rem; font-weight: 700;
       color: var(--silver-bright); letter-spacing: -0.5px;
       margin-bottom: 0.3rem;
     }
@@ -136,12 +142,11 @@
 
     .profile-hero p {
       color: var(--silver-subtle); font-size: 1.05rem;
-      max-width: 680px; margin: 0 auto 1.8rem;
+      max-width: 700px; margin: 0 auto 1.8rem;
     }
 
-    /* SILVER SOCIAL ICONS */
     .social-links {
-      display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;
     }
 
     .social-btn {
@@ -166,10 +171,11 @@
       font-family: var(--font-heading);
       font-size: 1.4rem; font-weight: 600;
       color: var(--silver-bright); margin-bottom: 1.5rem;
+      margin-top: 1rem;
       display: flex; align-items: center; gap: 0.6rem;
     }
 
-    .card-grid { display: flex; flex-direction: column; gap: 1rem; }
+    .card-grid { display: flex; flex-direction: column; gap: 1.2rem; }
 
     .card {
       background: var(--card-bg);
@@ -195,12 +201,52 @@
     }
 
     .card p { color: var(--silver-subtle); font-size: 0.95rem; }
+    
+    .card a.link-btn {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--accent-star);
+      text-decoration: none;
+    }
+    .card a.link-btn:hover { text-decoration: underline; }
 
-    /* EMBEDDED PDF VIEWER */
-    .pdf-frame {
-      width: 100%; height: 750px;
+    /* EVENT & PHOTO GALLERY STYLES */
+    .event-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .event-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .event-photo {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 6px;
       border: 1px solid var(--border-silver);
-      border-radius: 10px; background: #0a0c10;
+      background: #111;
+      transition: transform 0.25s ease;
+    }
+
+    .event-photo:hover {
+      transform: scale(1.03);
+      border-color: var(--silver-bright);
+    }
+
+    .pdf-frame {
+      width: 100%; 
+      height: 635px;
+      border: 1px solid var(--border-silver);
+      border-radius: 10px; 
+      background: #0a0c10;
+      margin-top: 1rem;
     }
 
     footer {
@@ -211,14 +257,17 @@
 
     @media (max-width: 600px) {
       .nav-container { flex-direction: column; height: auto; padding: 1rem; gap: 0.8rem; }
-      nav ul { width: 100%; justify-content: center; }
+      nav ul { width: 100%; justify-content: center; flex-wrap: wrap; }
       .profile-hero h1 { font-size: 1.8rem; }
+      .photo-wrapper { width: 220px; height: 220px; }
+      .pdf-frame { height: 450px; }
+      .event-gallery { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP TAB NAVIGATION -->
+  <!-- NAVIGATION TABS (4 TABS) -->
   <header>
     <div class="nav-container">
       <a href="#about" class="logo" onclick="switchTab('about')">Dr. Anjana <span>Mohandasan</span></a>
@@ -226,82 +275,223 @@
         <ul>
           <li><a href="#about" id="nav-about" class="active" onclick="switchTab('about')">About</a></li>
           <li><a href="#research" id="nav-research" onclick="switchTab('research')">Research</a></li>
-          <li><a href="#publications" id="nav-publications" onclick="switchTab('publications')">Publications</a></li>
-          <li><a href="#cv" id="nav-cv" onclick="switchTab('cv')">CV</a></li>
+          <li><a href="#activities" id="nav-activities" onclick="switchTab('activities')">Activities</a></li>
+          <li><a href="#publications-cv" id="nav-publications-cv" onclick="switchTab('publications-cv')">Publications & CV</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- PAGE 1: ABOUT / HOME -->
+    <!-- PAGE 1: ABOUT -->
     <section id="page-about" class="page active">
       <div class="profile-hero">
         <div class="photo-wrapper">
-          <!-- Put your picture file in the same folder as index.html named profile.jpg -->
-          <img src="profile.jpg" alt="Dr. Anjana Mohandasan" class="profile-photo" onerror="this.src='https://via.placeholder.com/160/0a0c10/e2e8f0?text=AM'">
+          <img src="profile.jpg" alt="Dr. Anjana Mohandasan" class="profile-photo" onerror="this.src='https://via.placeholder.com/300/0a0c10/e2e8f0?text=AM'">
         </div>
-        
+
         <h1>Dr. Anjana Mohandasan</h1>
         <div class="subtitle">Postdoctoral Researcher in Astrophysics</div>
-        
+
         <p>
-          Specializing in low-mass stars, ultracool dwarfs, brown dwarfs, and stellar populations in Galactic globular clusters using high-precision space and ground-based photometry.
+          Specialising in low-mass stars, ultracool dwarfs, brown dwarfs, and stellar populations in Galactic and extragalactic star clusters using high-precision space and ground-based photometry.
         </p>
 
         <div class="social-links">
-          <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a href="https://orcid.org" target="_blank" class="social-btn"><i class="fa-brands fa-orcid"></i> ORCID iD</a>
-          <a href="https://scholar.google.com" target="_blank" class="social-btn"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
-          <a href="https://github.com" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="mailto:your.email@institution.edu" class="social-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/in/anjana-mohandasan-8a9196263/" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://orcid.org/0000-0001-5182-0330" target="_blank" class="social-btn"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57222379243" target="_blank" class="social-btn"><i class="fa-solid fa-book-bookmark"></i> Scopus ID</a>
+          <a href="mailto:anjana.mohandasan@univ-fcomte.fr" class="social-btn"><i class="fa-solid fa-envelope"></i> Email</a>
         </div>
       </div>
 
-      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Key Focus Areas</h2>
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Current Affiliation</h2>
+      <div class="card" style="margin-bottom: 2rem;">
+        <h3>UTINAM Institute, OSU THETA, Université Marie et Louis Pasteur</h3>
+        <p>Besançon Observatory, 41 bis avenue de l’Observatoire, 25010, Besançon, France</p>
+        <p style="margin-top: 0.4rem; font-size: 0.88rem; color: var(--silver-subtle);"><strong>Supervisor:</strong> Prof. Céline Reylé</p>
+      </div>
+
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Affiliations & Memberships</h2>
       <div class="card-grid">
+        <!-- NEW IAU CARD -->
         <div class="card">
-          <h3>Ultracool Dwarfs & Sub-Stellar Objects</h3>
-          <p>Investigating fundamental atmospheric properties, spatial distributions, and evolutionary tracks of objects at the stellar-substellar boundary.</p>
+          <h3>International Astronomical Union (IAU)</h3>
+          <div class="meta">Junior Member (2026 – 2031)</div>
+          <p>Elected as an IAU Junior Member, participating in international astronomical initiatives and scientific divisions.</p>
         </div>
+
         <div class="card">
-          <h3>Globular Cluster Stellar Populations</h3>
-          <p>Analyzing multi-generation stellar populations and chemical variations across horizontal and giant branches using targeted photometric systems.</p>
+          <h3>Euclid Consortium</h3>
+          <p>Member of the Milky Way resolved stellar population science working group and SPE pipeline OUs of DSS within the Euclid consortium. Working on the Ultracool dwarfs work package.</p>
+        </div>
+        
+        <div class="card">
+          <h3>Gaia DPAC</h3>
+          <p>Member of the Gaia Data Processing and Analysis Consortium (CU9). Responsible for catalogue validation and building the low-mass end stellar Luminosity Function (DPAC211).</p>
         </div>
       </div>
     </section>
 
-    <!-- PAGE 2: RESEARCH -->
+    <!-- PAGE 2: DETAILED RESEARCH -->
     <section id="page-research" class="page">
-      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Research Projects</h2>
-      <div class="card-grid">
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Primary Research Thrusts</h2>
+      <div class="card-grid" style="margin-bottom: 2.5rem;">
         <div class="card">
-          <h3>Euclid Survey Data Analysis</h3>
-          <div class="meta">Euclid Consortium</div>
-          <p>Mining deep-field photometric datasets to discover and classify distant low-mass stars and brown dwarfs.</p>
+          <h3>Ultracool Dwarfs & Sub-Stellar Science</h3>
+          <p>Focusing on low-mass stars, L/T/Y dwarfs, and sub-stellar objects. Using deep survey data from Euclid and precision astrometry/photometry from Gaia to probe spatial distributions, low-mass IMF limits, and atmospheric evolution near the hydrogen-burning threshold.</p>
+        </div>
+        <div class="card">
+          <h3>Star Clusters & Photometric Binaries</h3>
+          <p>Investigating binary fractions and stellar evolution dynamics in Galactic globular clusters and Magellanic Cloud star clusters. Analyzing multiple stellar populations and anomalous cluster sequences via high-precision space photometry.</p>
+        </div>
+      </div>
+
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Observational & Proposal Experience</h2>
+      <div class="card-grid">
+        <!-- GTC CARD WITH INCLUDED PHOTO GALLERY -->
+        <div class="card event-card">
+          <div>
+            <h3>Gran Telescopio Canarias (GTC) — On-Site Observer</h3>
+            <div class="meta">EMIR & OSIRIS Instruments</div>
+            <p>Conducted 3 nights of direct GTC/EMIR observations (June 7–10, 2025). Co-Investigator of an approved GTC observational proposal for 6 nights total in EMIR and OSIRIS modes.</p>
+          </div>
+          <div class="event-gallery">
+            <img src="gtc1.jpg" alt="Gran Telescopio Canarias 1" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=GTC+Photo+1'">
+            <img src="gtc2.jpg" alt="Gran Telescopio Canarias 2" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=GTC+Photo+2'">
+            <img src="gtc3.jpg" alt="Gran Telescopio Canarias 3" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=GTC+Photo+3'">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>James Webb Space Telescope (JWST) — Co-Proposer</h3>
+          <div class="meta">Proposal ID: 9012 | Cycle 4 (2025)</div>
+          <p>Co-Investigator on an approved JWST observational proposal for 21 hours of targeted observation time.</p>
+        </div>
+        <div class="card">
+          <h3>Hubble Space Telescope (HST) — Co-Proposer</h3>
+          <div class="meta">Proposal ID: 17075 | Cycle 30 (2022)</div>
+          <p>Co-Investigator on an approved HST proposal focused on cluster stellar populations.</p>
         </div>
       </div>
     </section>
 
-    <!-- PAGE 3: PUBLICATIONS -->
-    <section id="page-publications" class="page">
-      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Selected Publications</h2>
-      <div class="card-grid">
+    <!-- PAGE 3: ACTIVITIES (TALKS, SCHOOLS, OUTREACH WITH PHOTOS) -->
+    <section id="page-activities" class="page">
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Astronomy Outreach</h2>
+      <div class="card-grid" style="margin-bottom: 2.5rem;">
+        <div class="card event-card">
+          <div>
+            <h3>Mimimi Mico Mama Macro</h3>
+            <div class="meta">Oct 2023 | Venice, Italy</div>
+            <p>An art and astronomy collaboration supported by Pro Helvetia, Venice. Delivered performative talks on general astronomy and personal research alongside artist Fabio Sonego, culminating in a joint publication.</p>
+          </div>
+          <div class="event-gallery">
+            <img src="outreach1.jpg" alt="Outreach Event Photo 1" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Outreach+Photo+1'">
+            <img src="outreach2.jpg" alt="Outreach Event Photo 2" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Outreach+Photo+2'">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Selected Conference Talks</h2>
+      <div class="card-grid" style="margin-bottom: 2.5rem;">
+        <div class="card event-card">
+          <div>
+            <h3>The annual meeting of the European Astronomical Society (EAS 2026)</h3>
+            <div class="meta">Invited Talk | Jun 28 – Jul 03, 2026 | Lausanne, Switzerland</div>
+            <p><strong>Title:</strong> Exploring Ultracool dwarfs with Euclid</p>
+          </div>
+          <div class="event-gallery">
+            <img src="eas_2026.jpg" alt="EAS 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo'">
+            <img src="eas_2026_1.jpg" alt="EAS 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+1'">
+            <img src="eas_2026_2.jpg" alt="Conference Venue" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+2'">
+            <img src="eas_2026_3.jpg" alt="Conference Venue" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+3'">
+          </div>
+        </div>
+
         <div class="card">
-          <h3>Ultracool dwarfs in the Euclid Deep Fields</h3>
-          <div class="meta">Astronomy & Astrophysics (A&A)</div>
-          <p><strong>A. Mohandasan</strong>, et al.</p>
+          <h3>Substellar Astrophysics Conference</h3>
+          <div class="meta">Contributed Talk | Aug 10 – 14, 2026 | Tordesillas, Spain</div>
+          <p><strong>Title:</strong> Exploring Ultracool dwarfs with Euclid</p>
+        </div>
+        <div class="event-gallery">
+            <img src="sub.jpg" alt="Sub 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+1'">
+            <img src="sub1.jpg" alt="Sub 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+1'">
+            <img src="sub2.jpg" alt="Conference Venue" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+2'">
+            <img src="sub3.jpg" alt="Sub 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+1'">
+            <img src="sub4.jpg" alt="Sub 2026 Presentation" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+1'">
+            <img src="sub5.jpg" alt="Conference Venue" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=Talk+Photo+2'">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>BD30: Brown dwarfs keep their cool</h3>
+          <div class="meta">Contributed Talk | Sep 01 – 05, 2025 | La Gomera, Canary Islands, Spain</div>
+          <p>Thirty years of substellar science symposium.</p>
+        </div>
+      </div>
+
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Advanced Training & Summer Schools</h2>
+      <div class="card-grid">
+        <div class="card event-card">
+          <div>
+            <h3>Educado Training School: Astro AI and Machine Learning</h3>
+            <div class="meta">Mar 02 – 06, 2026 | University of Ghent, Belgium</div>
+            <p>Focused on advanced machine learning applications in modern astronomical catalog analysis.</p>
+          </div>
+          <div class="event-gallery">
+            <img src="school1.jpg" alt="Educado School Group" class="event-photo" onerror="this.src='https://via.placeholder.com/300x200/111/e2e8f0?text=School+Photo+1'">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Evry Schatzman School: Stellar Physics in the PLATO era</h3>
+          <div class="meta">Sep 21 – 26, 2025 | Aussois, France</div>
+          <p>Sponsored by PNPS, CNRS, and CNES at Roscoff Marine Station.</p>
         </div>
       </div>
     </section>
 
-    <!-- PAGE 4: CV -->
-    <section id="page-cv" class="page">
+    <!-- PAGE 4: PUBLICATIONS & CV COMBINED -->
+    <section id="page-publications-cv" class="page">
+      <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> First-Authored Publications</h2>
+      
+      <div class="card-grid" style="margin-bottom: 1.5rem;">
+        <div class="card">
+          <h3>Euclid: Quick Data Release (Q1) – Ultracool dwarfs in the Euclid Deep Fields</h3>
+          <div class="meta">Euclid Collaboration: A. Mohandasan, R. L. Smart, C. Reyle, et al.</div>
+          <p>Accepted for publication in <em>Astronomy & Astrophysics (A&A)</em>.</p>
+          <a href="https://arxiv.org/abs/2503.22559" target="_blank" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> arXiv: 2503.22559</a>
+        </div>
+
+        <div class="card">
+          <h3>Photometric Binaries in 14 Magellanic Cloud star clusters</h3>
+          <div class="meta">Mohandasan, A., A. P. Milone, G. Cordoni, et al. (2024)</div>
+          <p><em>A&A</em>, 681, A42.</p>
+          <a href="https://doi.org/10.1051/0004-6361/202347424" target="_blank" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> DOI: 10.1051/0004-6361/202347424</a>
+        </div>
+
+        <div class="card">
+          <h3>Photometric Binaries in Magellanic Cloud star clusters</h3>
+          <div class="meta">Anjana Mohandasan</div>
+          <p>PhD Dissertation Data Release / Repository.</p>
+          <a href="https://doi.org/10.5281/zenodo.10939691" target="_blank" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> DOI: 10.5281/zenodo.10939691</a>
+        </div>
+
+        <div class="card">
+          <h3>Anomalous population in Omega Centauri: Binary origin</h3>
+          <div class="meta">Mohandasan, A., E. Pancino, L. Monaco, et al.</div>
+          <p><em>In preparation (advanced draft).</em></p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 3rem; background: rgba(56, 189, 248, 0.03);">
+        <h3>Co-Authored Publications</h3>
+        <p>Access the complete library of co-authored research papers on NASA ADS:</p>
+        <a href="https://ui.adsabs.harvard.edu/public-libraries/6IzJKooSR6CJfKjzvxM95Q" target="_blank" class="link-btn" style="font-weight: 600;"><i class="fa-solid fa-book-atlas"></i> View NASA ADS Public Library &rarr;</a>
+      </div>
+
       <h2 class="section-title"><i class="fa-solid fa-circle-dot" style="color:var(--silver-bright); font-size:0.8rem;"></i> Curriculum Vitae</h2>
-      <p style="color: var(--silver-subtle); margin-bottom: 1.2rem;">
-        Direct preview below. You can also <a href="CV.pdf" download style="color: var(--silver-bright); text-decoration: underline;">download the PDF file directly</a>.
-      </p>
-      <!-- Ensure CV.pdf is placed in the exact same folder as index.html -->
       <iframe src="CV.pdf" class="pdf-frame"></iframe>
     </section>
   </main>
@@ -314,10 +504,10 @@
     function switchTab(pageId) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-      
+
       const targetPage = document.getElementById('page-' + pageId);
       const targetNav = document.getElementById('nav-' + pageId);
-      
+
       if(targetPage) targetPage.classList.add('active');
       if(targetNav) targetNav.classList.add('active');
     }
