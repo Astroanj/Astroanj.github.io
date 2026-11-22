@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Anjana Mohandasan | Beyond Research</title>
+
+  <!-- Modern Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-beyond">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Dr. Anjana <span>Mohandasan</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="beyond.html" class="active"> &amp; more...</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <!-- PAGE 5: BEYOND RESEARCH -->
+    <!-- now let us make a new page for beyond research activities, lets call it '& more' do you have a better name, sotmehting short? highlight the beyond research actvities. let us have a expanding boxes like before. i plan to include some 3-4 portraits, the list of books I read, details about good films from different languages, good directors, etc.. than some travel photos of different places, food etc... anything else to add? any better way to present it? --> 
+<main>
+    <section class="page active">
+
+      <div class="pub-section-header">
+        <h2>Beyond Research</h2>
+      </div>
+      <p class="activities-intro">
+        A quiet corner for the things that pull me away from spectra, catalogs, and code. Lately, finding enough time to draw or settle into long books has been a stretch, so consider this a slow, living shelf (Click any circle below to open a section).
+      </p>
+
+      <!-- 2x2 CIRCULAR TABS -->
+      <div class="beyond-orb-grid" role="tablist" aria-label="Beyond research sections">
+        <button type="button" class="beyond-orb active" data-panel="panel-art" aria-selected="true">
+          <i class="fa-solid fa-paintbrush"></i>
+          <span class="orb-label">Drawing &amp; Art</span>
+          <span class="orb-sub">Portraits, watercolor &amp; pencil</span>
+        </button>
+
+        <button type="button" class="beyond-orb" data-panel="panel-books" aria-selected="false">
+          <i class="fa-solid fa-book"></i>
+          <span class="orb-label">Books</span>
+          <span class="orb-sub">This year, favorites &amp; dark reads</span>
+        </button>
+
+        <button type="button" class="beyond-orb" data-panel="panel-cinema" aria-selected="false">
+          <i class="fa-solid fa-clapperboard"></i>
+          <span class="orb-label">Films &amp; Anime</span>
+          <span class="orb-sub">Languages, directors &amp; worlds</span>
+        </button>
+
+        <button type="button" class="beyond-orb" data-panel="panel-travel-food" aria-selected="false">
+          <i class="fa-solid fa-compass"></i>
+          <span class="orb-label">Travel &amp; Food</span>
+          <span class="orb-sub">Cities &amp; tables</span>
+        </button>
+      </div>
+
+      <!-- EXPANDABLE PANEL 1: ART -->
+      <div id="panel-art" class="beyond-panel active">
+        <h3>Drawing, Portraits &amp; Sketching</h3>
+        <p>
+          I enjoy making portraits, pencil drawings, struggle a bit with watercolor pieces, and trying my hand in a bit of oil pastel work :) Right now I am mostly trying to carve out free time to get back to my sketchbook, there have been fewer days for it lately, though I always come back to it when I can. 
+        </p>
+        <div class="obs-gallery">
+          <img src="figures/portrait_1.png" alt="Portrait drawing" class="obs-thumb" onerror="this.style.display='none';">
+          <img src="figures/portrait_2.png" alt="Watercolor or pencil study" class="obs-thumb" onerror="this.style.display='none';">
+          <img src="figures/art_sketch.png" alt="Oil pastel or sketch work" class="obs-thumb" onerror="this.style.display='none';">
+        </div>
+      </div>
+
+      <!-- EXPANDABLE PANEL 2: BOOKS -->
+      <div id="panel-books" class="beyond-panel">
+        <h3>Books &amp; Reading</h3>
+        <p class="panel-note">
+          Reading moves slowly when research is busy, so these lists are a mix of what I have been picking up recently and books that stay with me.
+        </p>
+
+        <div class="beyond-subgrid">
+          <div class="beyond-subcard">
+            <h4>Reading List This Year</h4>
+            <ul>
+              <li><strong>I Am Not Your Negro</strong> — James Baldwin</li>
+              <li><strong>Poems by Maya Angelou</strong> — <em>(</em></li>
+              <li><strong>Q &amp; A</strong> — Vikas Swarup (the novel behind <em>Slumdog Millionaire</em>)</li>
+              <li><strong>The House on Mango Street</strong> — Sandra Cisneros</li>
+              <li><strong>A Week in Winter</strong> — Maeve Binchy</li>
+              <li><strong>The Vegetarian</strong> — Han Kang</li>
+              <li><strong>Interpreter of Maladies</strong> — Jhumpa Lahiri</li>
+              <li><strong>Days at the Morisaki Bookshop</strong> — Satoshi Yagisawa (trans. Eric Ozawa)</li>
+              <li><strong>Women of Valmiki</strong> &amp; <strong>Ravana: The Story of the Vanquished</strong> — Anand Neelakantan</li>
+            </ul>
+          </div>
+
+          <div class="beyond-subcard">
+            <h4>All-Time Favorites</h4>
+            <ul>
+              <li><strong>Pratham Pratishruti</strong> — Ashapurna Devi (Malayalam trans.)</li>
+              <li><strong>Midnight’s Children</strong> — Salman Rushdie</li>
+              <li><strong>Days at the Morisaki Bookshop</strong> — Satoshi Yagisawa (English trans. Eric Ozawa)</li>
+              <li><strong>The Vegetarian</strong> — Han Kang</li>
+            </ul>
+
+            <h4 class="subcard-spaced">Dark, Heavy &amp; Unsettling Reads</h4>
+            <ul>
+              <li><strong>The Grapes of Wrath</strong> — John Steinbeck</li>
+              <li><strong>Francis Ittykkora</strong> — T. D. Ramakrishnan (Malayalam)</li>
+              <li><strong>The Vegetarian</strong> — Han Kang</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+<!-- EXPANDABLE PANEL 3: CINEMA & ANIME (LANGUAGES, THEMES & WORLDS) -->
+      <div id="panel-cinema" class="beyond-panel">
+        <h3>Films, Languages &amp; Worlds</h3>
+        <p class="panel-note">
+          I love cinema that crosses borders, languages, and moods, from quiet human dramas and visual poetry to sharp thrillers, folklore, and sweeping adventures, in essence anything that is directed well. The titles below are just a small window into a much larger (must) watchlist.
+        </p>
+
+        <!-- THEMES & SPECIAL SOFT SPOTS -->
+        <div class="beyond-highlight-strip">
+          <span class="highlight-label">Themes &amp; Special Soft Spots</span>
+          <div class="pill-row">
+            <span class="beyond-pill">The Secret Life of Walter Mitty</span>
+            <span class="beyond-pill">Mad Max: Fury Road</span>
+            <span class="beyond-pill">The Lake House</span>
+            <span class="beyond-pill">The Shawshank Redemption</span>
+            <span class="beyond-pill">Perfect Days</span>
+            <span class="beyond-pill">The Grand Budapest Hotel</span>
+            <span class="beyond-pill">Kung Fu Panda :)</span>
+          </div>
+        </div>
+
+        <!-- CINEMA BY LANGUAGE & SENSIBILITY -->
+        <div class="beyond-subgrid">
+          <div class="beyond-subcard">
+            <h4>Malayalam &amp; Tamil Cinema</h4>
+            <p class="subcard-lead">
+              Rooted storytelling, subtle humor, and timeless classics—from <em>Oru Cheru Punchiri</em>, <em>Mohiniyattam</em>, <em>Yodha</em>, and <em>Maharaja</em> to many more across Malayalam and Tamil cinema.
+            </p>
+          </div>
+
+          <div class="beyond-subcard">
+            <h4>Hindi &amp; Bengali Cinema</h4>
+            <p class="subcard-lead">
+              From <em>Swadesh</em>, <em>Lagaan</em>, <em>Delhi Belly</em>, and <em>Tumbbad</em> to Mira Nair’s <em>The Namesake</em> and <em>Monsoon Wedding</em>, and Satyajit Ray’s <em>Pather Panchali</em>.
+            </p>
+          </div>
+
+          <div class="beyond-subcard">
+            <h4>Korean &amp; Japanese Cinema</h4>
+            <p class="subcard-lead">
+              Unforgettable tension, craft, emotion and twists, including <em>Memories of Murder</em>, <em>Oldboy</em>, <em>Parasite</em>, and <em>No Other Choice</em>, alongside Japanese cinema and anime worlds.
+            </p>
+          </div>
+
+          <div class="beyond-subcard">
+            <h4>French, Chinese &amp; World Cinema</h4>
+            <p class="subcard-lead">
+              Poetic color and atmosphere—from <em>Three Colours: Blue</em>, <em>The Green Ray</em> (<em>Le Rayon vert</em>), and <em>Amélie</em> to Wong Kar-wai’s <em>In the Mood for Love</em>, <em>Chungking Express</em>, and <em>Happy Together</em>.
+            </p>
+          </div>
+        </div>
+
+        <!-- ANIME & DIRECTORS FOOTER STRIP -->
+        <div class="beyond-highlight-strip" style="margin-top: 1.25rem;">
+          <span class="highlight-label">Anime &amp; Favorite Directors</span>
+          <div class="pill-row">
+            <span class="beyond-pill">Attack on Titan</span>
+            <span class="beyond-pill">Inuyasha</span>
+            <span class="beyond-pill">Kamisama Kiss</span>
+            <span class="beyond-pill">Mira Nair</span>
+            <span class="beyond-pill">Wes Anderson</span>
+            <span class="beyond-pill">Wong Kar-wai</span>
+            <span class="beyond-pill">Satyajit Ray</span>
+            <span class="beyond-pill beyond-pill-muted">+ many more</span>
+          </div>
+        </div>
+      </div>
+
+<!-- EXPANDABLE PANEL 4: TRAVEL & FOOD (CITY PILLS) -->
+      <div id="panel-travel-food" class="beyond-panel">
+        <h3>Travel &amp; Food</h3>
+        <p class="panel-note">
+          Two ways of experiencing the world up close: wandering new streets and sitting down to memorable meals.
+        </p>
+
+        <div class="beyond-highlight-strip">
+          <span class="highlight-label">Cuisines I Love</span>
+          <div class="pill-row">
+            <span class="beyond-pill">Kerala &amp; South Indian</span>
+            <span class="beyond-pill">Mughlai</span>
+            <span class="beyond-pill">Sri Lankan</span>
+            <span class="beyond-pill">Thai</span>
+            <span class="beyond-pill">Chinese</span>
+            <span class="beyond-pill">Indonesian</span>
+            <span class="beyond-pill">Italian</span>
+            <span class="beyond-pill">French</span>
+          </div>
+        </div>
+
+        <div class="beyond-subgrid">
+          <div class="beyond-subcard">
+            <h4>Indian Subcontinent</h4>
+            <div class="pill-row">
+              <span class="beyond-pill">Kochi</span>
+              <span class="beyond-pill">Trivandrum</span>
+              <span class="beyond-pill">Bengaluru</span>
+              <span class="beyond-pill">Hyderabad</span>
+              <span class="beyond-pill">Mumbai</span>
+              <span class="beyond-pill">Pune</span>
+              <span class="beyond-pill">Jaipur</span>
+              <span class="beyond-pill">Delhi</span>
+              <span class="beyond-pill">Chandigarh</span>
+              <span class="beyond-pill">Shimla</span>
+              <span class="beyond-pill">Nainital</span>
+              <span class="beyond-pill">Kolkata</span>
+              <span class="beyond-pill">Bhopal</span>
+              <span class="beyond-pill beyond-pill-muted">&amp; more</span>
+            </div>
+          </div>
+
+          <div class="beyond-subcard">
+            <h4>Europe</h4>
+            <div class="pill-row">
+              <span class="beyond-pill">Besançon</span>
+              <span class="beyond-pill">Paris</span>
+              <span class="beyond-pill">Strasbourg</span>
+              <span class="beyond-pill">Dijon</span>
+              <span class="beyond-pill">Dole</span>
+              <span class="beyond-pill">Pontarlier</span>
+              <span class="beyond-pill">Belfort</span>
+              <span class="beyond-pill">Padova</span>
+              <span class="beyond-pill">Bologna</span>
+              <span class="beyond-pill">Venice</span>
+              <span class="beyond-pill">Verona</span>
+              <span class="beyond-pill">Trieste</span>
+              <span class="beyond-pill">Madrid</span>
+              <span class="beyond-pill">Tordesillas</span>
+              <span class="beyond-pill">Tenerife</span>
+              <span class="beyond-pill">La Palma</span>
+              <span class="beyond-pill">Lausanne</span>
+              <span class="beyond-pill">Geneva</span>
+              <span class="beyond-pill">Brussels</span>
+              <span class="beyond-pill">Ghent</span>
+              <span class="beyond-pill">Bruges</span>
+              <span class="beyond-pill">Amsterdam</span>
+              <span class="beyond-pill">Leiden</span>
+              <span class="beyond-pill">Munich</span>
+              <span class="beyond-pill">Heidelberg</span>
+              <span class="beyond-pill">Prague</span>
+              <span class="beyond-pill">Kraków</span>
+              <span class="beyond-pill">Budapest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="obs-gallery">
+          <img src="figures/travel_1.png" alt="Travel memory" class="obs-thumb" onerror="this.style.display='none';">
+          <img src="figures/travel_2.png" alt="City or landscape view" class="obs-thumb" onerror="this.style.display='none';">
+          <img src="figures/food_1.png" alt="Favorite food" class="obs-thumb" onerror="this.style.display='none';">
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Dr. Anjana Mohandasan</p>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const orbs = document.querySelectorAll('.beyond-orb');
+      const panels = document.querySelectorAll('.beyond-panel');
+
+      orbs.forEach((orb) => {
+        orb.addEventListener('click', () => {
+          const targetId = orb.getAttribute('data-panel');
+          const alreadyActive = orb.classList.contains('active');
+
+          orbs.forEach((btn) => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          panels.forEach((panel) => panel.classList.remove('active'));
+
+          if (!alreadyActive) {
+            orb.classList.add('active');
+            orb.setAttribute('aria-selected', 'true');
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) targetPanel.classList.add('active');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
